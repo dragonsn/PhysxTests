@@ -22,6 +22,9 @@
     <Filter Include="imgui">
       <UniqueIdentifier>{8442ce31-401d-48d7-9244-f0e82c6d73fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="physx_wraper">
+      <UniqueIdentifier>{36613df2-842b-4f1d-b592-e12de237e81e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PhysxTests.cpp">
@@ -51,6 +54,33 @@
     <ClCompile Include="ThirdParty\im3d\dx11\im3d_directx11.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="physx_wrap\detail\physx_wrap.cpp">
+      <Filter>physx_wraper</Filter>
+    </ClCompile>
+    <ClCompile Include="physx_wrap\detail\physx_pvd.cpp">
+      <Filter>physx_wraper</Filter>
+    </ClCompile>
+    <ClCompile Include="physx_wrap\detail\physx_sdk.cpp">
+      <Filter>physx_wraper</Filter>
+    </ClCompile>
+    <ClCompile Include="physx_wrap\detail\physx_wrap_impl.cpp">
+      <Filter>physx_wraper</Filter>
+    </ClCompile>
+    <ClCompile Include="physx_wrap\detail\scene_info_mgr.cpp">
+      <Filter>physx_wraper</Filter>
+    </ClCompile>
+    <ClCompile Include="physx_wrap\detail\util.cpp">
+      <Filter>physx_wraper</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test1.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ThirdParty\im3d\app\im3d_example.h">
@@ -58,6 +88,24 @@
     </ClInclude>
     <ClInclude Include="ThirdParty\im3d\app\teapot.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="physx_wrap\detail\log.h">
+      <Filter>physx_wraper</Filter>
+    </ClInclude>
+    <ClInclude Include="physx_wrap\detail\physx_pvd.h">
+      <Filter>physx_wraper</Filter>
+    </ClInclude>
+    <ClInclude Include="physx_wrap\detail\physx_sdk.h">
+      <Filter>physx_wraper</Filter>
+    </ClInclude>
+    <ClInclude Include="physx_wrap\detail\physx_wrap_impl.h">
+      <Filter>physx_wraper</Filter>
+    </ClInclude>
+    <ClInclude Include="physx_wrap\detail\scene_info_mgr.h">
+      <Filter>physx_wraper</Filter>
+    </ClInclude>
+    <ClInclude Include="physx_wrap\detail\util.h">
+      <Filter>physx_wraper</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

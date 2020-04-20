@@ -75,6 +75,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(ProjectDir)\ThirdParty\PhysX_3.4\PhysX\Include;$(ProjectDir)\ThirdParty\PhysX_3.4\PxShared\include;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -107,13 +108,18 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>IM3D_DX11;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>ThirdParty\im3d;ThirdParty\imgui;ThirdParty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>ThirdParty\im3d;ThirdParty\imgui;ThirdParty;ThirdParty\PhysX_3.4\PhysX\Include;ThirdParty\PhysX_3.4\PxShared\include;physx_wrap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>d3dcompiler.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>ThirdParty\PhysX_3.4\PhysX\Lib\vc15win64;C:\GitHub\PhysxTests\PhysxTests\ThirdParty\PhysX_3.4\PxShared\lib\vc15win64</AdditionalLibraryDirectories>
     </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -157,6 +163,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="PhysxTests.cpp" />
+    <ClCompile Include="physx_wrap\detail\physx_pvd.cpp" />
+    <ClCompile Include="physx_wrap\detail\physx_sdk.cpp" />
+    <ClCompile Include="physx_wrap\detail\physx_wrap.cpp" />
+    <ClCompile Include="physx_wrap\detail\physx_wrap_impl.cpp" />
+    <ClCompile Include="physx_wrap\detail\scene_info_mgr.cpp" />
+    <ClCompile Include="physx_wrap\detail\util.cpp" />
+    <ClCompile Include="test\test1.cpp" />
+    <ClCompile Include="test\test2.cpp" />
+    <ClCompile Include="test\test3.cpp" />
     <ClCompile Include="ThirdParty\im3d\app\im3d_example.cpp" />
     <ClCompile Include="ThirdParty\im3d\app\main.cpp" />
     <ClCompile Include="ThirdParty\im3d\dx11\im3d_directx11.cpp" />
@@ -167,6 +182,12 @@
     <ClCompile Include="ThirdParty\imgui\imgui_widgets.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="physx_wrap\detail\log.h" />
+    <ClInclude Include="physx_wrap\detail\physx_pvd.h" />
+    <ClInclude Include="physx_wrap\detail\physx_sdk.h" />
+    <ClInclude Include="physx_wrap\detail\physx_wrap_impl.h" />
+    <ClInclude Include="physx_wrap\detail\scene_info_mgr.h" />
+    <ClInclude Include="physx_wrap\detail\util.h" />
     <ClInclude Include="ThirdParty\im3d\app\im3d_example.h" />
     <ClInclude Include="ThirdParty\im3d\app\teapot.h" />
   </ItemGroup>

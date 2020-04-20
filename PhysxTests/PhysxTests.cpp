@@ -6,8 +6,13 @@
 #include "imgui.h"
 #include "app/im3d_example.h"
 
+void Test1();
+void Test2();
+void Test3();
+
 int main(int, char**)
 {
+	Test3();
 	Im3d::Example example;
 	if (!example.init(-1, -1, "Im3d Example")) {
 		return 1;
